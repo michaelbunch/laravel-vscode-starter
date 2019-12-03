@@ -1,0 +1,35 @@
+{
+	"name": "Caddy with PHP 7, MySQL, and Redis",
+	
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "web",
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/srv",
+
+	"settings": {
+		"composer.executablePath": "/usr/bin/composer",
+		"terminal.integrated.shell.linux": "/bin/sh"
+	},
+		
+	"extensions": [
+		// General Extensions
+		"eamodio.gitlens",
+		"mutantdino.resourcemonitor",
+
+		// Node Extensions
+		"eg2.vscode-npm-script",
+
+		// PHP Extensions
+		"felixfbecker.php-debug",
+		"bmewburn.vscode-intelephense-client",
+		"ikappas.composer",
+		"mikestead.dotenv",
+		"mehedidracula.php-namespace-resolver",
+		
+		// Laravel Extensions
+		"ryannaddy.laravel-artisan",
+		"codingyu.laravel-goto-view",
+		"onecentlin.laravel-blade",
+		"onecentlin.laravel5-snippets"
+	]
+}

@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./containers/Dockerfile
+    volumes:
+      - ".:/srv"
+    ports:
+      - "2015:2015"
+    links:
+      - db
+      - redis
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - "3306"
+  redis:
+    image: redis:4.0-alpine
+    ports:
+      - "6379"
