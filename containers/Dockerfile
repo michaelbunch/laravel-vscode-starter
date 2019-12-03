@@ -1,5 +1,8 @@
 FROM abiosoft/caddy:1.0.3-php
 
+# Install Redis Support
+RUN apk add --no-cache php7-pecl-redis
+
 # Install Xdebug
 RUN apk add --no-cache php7-pecl-xdebug \
     && echo "zend_extension=xdebug.so" >> /etc/php7/conf.d/xdebug.ini \
