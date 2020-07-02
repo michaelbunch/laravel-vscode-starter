@@ -1,6 +1,6 @@
 {
-	"name": "Caddy with PHP 7, MySQL, and Redis",
-	
+	"name": "homedash-devcontainer",
+
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "web",
 	"shutdownAction": "stopCompose",
@@ -9,9 +9,12 @@
 	"settings": {
 		"composer.executablePath": "/usr/bin/composer",
 		"terminal.integrated.shell.linux": "/bin/sh",
-		"npm.exclude": "**/@(vendor|node_modules|bower_components|dist|static)/**"
+		"npm.exclude": "**/@(vendor|node_modules|bower_components|dist|static)/**",
+		"namespaceResolver.autoSort": true,
+		"namespaceResolver.sortOnSave": true,
+		"namespaceResolver.sortAlphabetically": true
 	},
-		
+
 	"extensions": [
 		// General Extensions
 		"eamodio.gitlens",
@@ -26,6 +29,7 @@
 		"ikappas.composer",
 		"mikestead.dotenv",
 		"mehedidracula.php-namespace-resolver",
+		"recca0120.vscode-phpunit",
 		
 		// Laravel Extensions
 		"ryannaddy.laravel-artisan",
